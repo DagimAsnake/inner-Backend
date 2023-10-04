@@ -24,8 +24,8 @@ if (process.env.NODE_ENV != 'production') {
       console.log(err);
     });
   
-    app.use(express.urlencoded({ extended: true }));
-    app.use(express.json());
+    // app.use(express.urlencoded({ extended: true }));
+    app.use(express.json({limit: "30mb",extended:true}));
     app.use(function (req, res, next) {
       res.setHeader("Access-Control-Allow-Origin", "*");
       res.setHeader("Access-Control-Allow-Methods", "*");
@@ -34,4 +34,8 @@ if (process.env.NODE_ENV != 'production') {
     });
   
     app.use(cors());
+  
+    const HomeRouter = require('./route/Home')
+
+    app.use('/home', HomeRouter)
   
