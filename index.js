@@ -36,6 +36,9 @@ if (process.env.NODE_ENV != 'production') {
     app.use(cors());
   
     const HomeRouter = require('./route/Home')
+    const AboutRouter = require('./route/About')
 
     app.use('/home', HomeRouter)
+    app.use('/about', AboutRouter)
+
   
