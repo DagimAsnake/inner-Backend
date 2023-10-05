@@ -40,12 +40,14 @@ if (process.env.NODE_ENV != 'production') {
     const ContactRouter = require('./route/Contact')
     const PartnerRouter = require('./route/Partner')
     const ClientRouter = require('./route/Client')
+    const ServiceRouter = require('./route/Service')
 
     app.use('/home', HomeRouter)
     app.use('/about', AboutRouter)
     app.use('/contact', ContactRouter)
     app.use('/partner', PartnerRouter)
     app.use('/client', ClientRouter)
+    app.use('/service', ServiceRouter)
 
 
   
