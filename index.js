@@ -41,6 +41,7 @@ if (process.env.NODE_ENV != 'production') {
     const PartnerRouter = require('./route/Partner')
     const ClientRouter = require('./route/Client')
     const ServiceRouter = require('./route/Service')
+    const MeetTeamRouter = require('./route/MeetTeam')
 
     app.use('/home', HomeRouter)
     app.use('/about', AboutRouter)
@@ -48,6 +49,6 @@ if (process.env.NODE_ENV != 'production') {
     app.use('/partner', PartnerRouter)
     app.use('/client', ClientRouter)
     app.use('/service', ServiceRouter)
-
+    app.use('/meetTeam', MeetTeamRouter)
 
   
