@@ -53,7 +53,7 @@ module.exports.deletePartner = async function (req, res) {
         await Partner.findByIdAndDelete(partnerId);
         return res.status(200).json({ msg: 'Partner deleted successfully' });
     } catch (error) {
-        console.error('Error deleting blog:', error);
+        console.error('Error deleting partner:', error);
         return res.status(500).json({ error: 'Server error' });
     }
 };
